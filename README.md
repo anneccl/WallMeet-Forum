@@ -40,10 +40,10 @@ ORM / BD : Entity Framework Core + SQLite (migrations incluses)  <br>
 Sécurité : BCrypt.Net-Next  <br>
 Architecture : modèles / pages Razor / accès aux données (ApplicationDbContext, DbSeeder) / utilitaires  <br>
 
-## Comment déarrer Démarrage
+## Comment démarrer
 bashdotnet restore   <br>
 dotnet run  <br>
-# La base SQLite est créée et alimentée automatiquement au premier lancement.
+ <br>La base SQLite est créée et alimentée automatiquement au premier lancement.
 Comptes de test (voir comptes.txt) 
 
 Statut :  Terminé
