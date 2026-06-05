@@ -1,0 +1,90 @@
+﻿@page
+@model TP5.Pages.LoginModel
+@{
+    ViewData["Title"] = "Page de connexion";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/login.css" />
+    
+</head>
+<body>
+
+    <!-- Bordures décoratives sur les bords -->
+    <div class="deco-border-top"></div>
+    <div class="deco-border-bottom"></div>
+    <div class="deco-border-left"></div>
+    <div class="deco-border-right"></div>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+
+            <!-- Header -->
+            <div class="login-header">
+                <h1 class="login-brand">TP5 - WallMeet</h1>
+                <div class="brand-line"></div>
+                <p class="login-subtitle">Page de connexion</p>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+
+                @if (!string.IsNullOrEmpty(Model.MessageError))
+                {
+                    <p class="msg-error">@Model.MessageError</p>
+                }
+
+                <form method="post">
+                    <div class="form-group">
+                        <label for="mail">Adresse e-mail</label>
+                        <div class="input-wrapper">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            <input type="email"
+                                   id="mail"
+                                   name="Mail"
+                                   placeholder="vous@wallmeet.com"
+                                   value="@Model.Mail"
+                                   required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <div class="input-wrapper">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <input type="password"
+                                   id="password"
+                                   name="Password"
+                                   placeholder="••••••••"
+                                   required />
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Se connecter
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg> @* Icone *@
+                    </button>
+                </form>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿1. Admin:
+   Courriel: superadmin@wallmeet.com
+   Mot de passe: Admin123!
+
+2. Utilisateur :
+   Courriel: emmatremblay@wallmeet.com
+   Mot de passe: Emma789!
+
+3. Utilisateur :
+   Courriel: lucasbouchard@wallmeet.com
+   Mot de passe: Lucas456!

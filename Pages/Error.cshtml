@@ -1,0 +1,35 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - WallMeet</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- Bordures décoratives -->
+    <div class="deco-border-top"></div>
+    <div class="deco-border-bottom"></div>
+    <div class="deco-border-left"></div>
+    <div class="deco-border-right"></div>
+
+    <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px 16px;">
+        <div style="text-align:center;max-width:440px;">
+            <h1 style="font-size:3rem;font-weight:900;color:#d65179;">Oups !</h1>
+            <p style="color:var(--color-muted-fg);margin:16px 0 32px;">
+                Une erreur est survenue lors du traitement de votre requête.
+            </p>
+            <a href="/" class="btn" style="text-decoration:none;">
+                Retour à l'accueil
+            </a>
+        </div>
+    </div>
+</body>
+</html>
